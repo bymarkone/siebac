@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/phantomjs_spec_helper.js',
+      'spec/helpers/phantomjs_spec_helper.js',
       'spec/**/*_spec.js'
     ],
 
@@ -27,7 +27,7 @@ module.exports = function(config) {
 
     browserify: {
       transform: ['babelify'],
-      paths: ['./app/']
+      paths: ['./app/', './spec/helpers/']
     },
 
     // test results reporter to use

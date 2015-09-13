@@ -35,10 +35,23 @@ gulp.task('optimize', ['compileBabelWithBrowserify'], function () {
 gulp.task('lint', function () {
   return gulp.src(['./app/**/*.js'])
     .pipe(eslint({
-      rules: {
-        'no-trailing-spaces': 1,
-        quotes: [1, "single", "avoid-escape"]
-      }
+      "rules": {
+        "no-trailing-spaces": 1,
+        "quotes": [1, "single", "avoid-escape"]
+      },
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "arrowFunctions": true,
+        "blockBindings": true,
+        "classes": true,
+        "defaultParams": true,
+        "annotations": true
+      },
+      "plugins": [
+        "react"
+      ],
+      "parser": "babel-eslint"
     }))
     .pipe(eslint.format())
     .pipe(eslint.failOnError());

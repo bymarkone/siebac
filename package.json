@@ -9,12 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "react": "^0.13.3",
+    "react-cursor": "^1.2.1"
   },
   "devDependencies": {
+    "babel-eslint": "^4.1.1",
     "babelify": "^6.3.0",
     "browserify": "^11.1.0",
     "chai": "^3.2.0",
+    "eslint-plugin-react": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
