@@ -21,6 +21,8 @@ export default class Root extends React.Component {
           <h1 className="container">Será que eu deveria comprar um carro?</h1>
         </header>
         <section className="container">
+          <h2>Configure seu carro</h2>
+          <hr />
           <BuyPrice cursor={cursor.refine('car')} />
         </section>
       </form>

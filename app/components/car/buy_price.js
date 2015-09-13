@@ -9,8 +9,13 @@ export default class BuyPrice extends React.Component {
   render () {
     return (
       <div className="form-group">
-        <label htmlFor="buy-price-range">Por quanto você comprou o carro?</label>
-        <input type="range" className="form-control" id="buy-price-range" min="5000" max="100000" step="500" onChange={this.onChange.bind(this)} value={this.buyPrice()} />
+        <label htmlFor="buy-price-range">
+          Qual o valor de mercado atual do seu carro?
+          <small>
+            <a href="http://www.fipe.org.br/pt-br/indices/veiculos/" target="_blank">(Consulte a tabela Fipe)</a>
+          </small>
+        </label>
+        <input type="range" id="buy-price-range" min="5000" max="100000" step="500" onChange={this.onChange.bind(this)} value={this.buyPrice()} />
         <span className="help-block">{this.formattedBuyPrice()}</span>
       </div>
     );

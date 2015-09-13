@@ -38,4 +38,8 @@ describe('Foo', () => {
     expect(cursor.refine('buyPrice').value).to.equal(15000);
     expect(document.querySelector('.help-block').innerHTML).to.equal('R$ 15.000,00');
   });
+
+  it('has a link to tabela fipe', () => {
+    expect(document.querySelector('a[href="http://www.fipe.org.br/pt-br/indices/veiculos/"]')).to.exist;
+  });
 });
