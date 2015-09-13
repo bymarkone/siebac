@@ -17,7 +17,12 @@ export default class Root extends React.Component {
 
     return (
       <form>
-        <BuyPrice cursor={cursor.refine('car')} />
+        <header>
+          <h1 className="container">Será que eu deveria comprar um carro?</h1>
+        </header>
+        <section className="container">
+          <BuyPrice cursor={cursor.refine('car')} />
+        </section>
       </form>
     );
   }
