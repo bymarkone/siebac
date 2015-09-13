@@ -1,13 +1,14 @@
 import React from 'react/addons';
+import {expect, matched} from 'chai';
 import Root from 'components/root';
-import {expect} from 'chai';
-import shallowRenderer from 'shallow_renderer';
 import BuyPrice from 'components/car/buy_price';
 
+const TestUtils = React.addons.TestUtils;
+
 describe('Foo', () => {
-  it('renders the right template', () => {
-    expect(shallowRenderer(<Root />)).to.eql(
-      <BuyPrice />
-    );
+  it('renders buy price', () => {
+    let rendered = TestUtils.renderIntoDocument(<Root />)
+
+    expect(TestUtils.findRenderedComponentWithType(rendered, BuyPrice)).to.be.an('object');
   });
 });

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "latest",
+    "numeral": "^1.5.3",
     "react": "^0.13.3",
     "react-cursor": "^1.2.1"
   },
