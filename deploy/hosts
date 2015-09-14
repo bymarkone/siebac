@@ -1,0 +1,2 @@
+staging.cbsoft.javascript-toolkit.com docker_port=5000 docker_name=staging
+cbsoft.javascript-toolkit.com docker_port=4000 docker_name=production

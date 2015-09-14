@@ -15,23 +15,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/phantomjs_spec_helper.js',
-      'build/site/lib/*.js',
-      'spec/*_spec.js'
+      'spec/helpers/phantomjs_spec_helper.js',
+      'spec/**/*_spec.js'
     ],
-
-
-    // list of files to exclude
-    exclude: [
-    ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'spec/*_spec.js': ['browserify']
+      'spec/**/*.js': ['browserify']
     },
 
+    browserify: {
+      transform: ['babelify'],
+      paths: ['./app/', './spec/helpers/']
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -63,11 +60,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: true
 
-    browserify: {
-      debug: true,
-      paths: ['build/site']
-    }
   });
 };

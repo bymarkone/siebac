@@ -20,5 +20,5 @@
     - copy: src=../release/ dest={{app_location}}
 
     - docker_image: path={{app_location}} name={{docker_name}} state=build
-    - docker: image={{docker_name}} name={{docker_name}}-1 state=absent
-    - docker: image={{docker_name}} name={{docker_name}}-1 ports={{docker_port}}:3000 state=present
+    - docker: image={{docker_name}} name={{docker_name}}-1 state=absent docker_api_version=1.18
+    - docker: image={{docker_name}} name={{docker_name}}-1 ports=127.0.0.1:{{docker_port}}:3000 state=started docker_api_version=1.18
