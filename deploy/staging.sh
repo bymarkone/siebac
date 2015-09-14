@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook -i deploy/hosts deploy/play.yml --limit 162.209.75.166
+ansible-playbook -i deploy/hosts deploy/play.yml --limit staging.cbsoft.javascript-toolkit.com
