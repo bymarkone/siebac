@@ -3,7 +3,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
-var watchify = require('watchify');
 var babel = require('babelify');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -15,7 +14,7 @@ gulp.task('copyIndex', function () {
 });
 
 gulp.task('compileBabelWithBrowserify', function() {
-  var bundler = watchify(browserify('./app/index.js', { debug: true }).transform(babel));
+  var bundler = browserify('./app/index.js', { debug: true }).transform(babel);
 
   return bundler.bundle()
     .on('error', function(err) { console.error(err); this.emit('end'); })
@@ -77,3 +76,12 @@ gulp.task('buildStyles', ['sass']);
 gulp.task('build', ['copyIndex', 'buildJavascript', 'buildStyles']);
 
 gulp.task('default', ['build']);
+
+gulp.task('releaseFiles', function () {
+  return gulp.src(['Dockerfile', 'package.json', 'app.js'])
+    .pipe(gulp.dest('release'));
+});
+gulp.task('release', ['releaseFiles'], function () {
+  return gulp.src(['build/**/*'])
+    .pipe(gulp.dest('release/build'));
+});

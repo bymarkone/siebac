@@ -4,7 +4,8 @@
   "description": "SIEBAC Portal",
   "main": "app.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js"
+    "test": "node_modules/karma/bin/karma start karma.conf.js",
+    "release": "gulp release"
   },
   "author": "",
   "license": "ISC",
@@ -31,7 +32,6 @@
     "mocha": "^2.3.2",
     "phantomjs": "^1.9.18",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
+    "vinyl-source-stream": "^1.1.0"
   }
 }
