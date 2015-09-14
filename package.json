@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "node_modules/karma/bin/karma start karma.conf.js",
-    "release": "gulp release"
+    "release": "gulp release",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",

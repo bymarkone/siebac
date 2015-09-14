@@ -77,7 +77,7 @@ gulp.task('build', ['copyIndex', 'buildJavascript', 'buildStyles']);
 
 gulp.task('default', ['build']);
 
-gulp.task('releaseFiles', function () {
+gulp.task('releaseFiles', ['build'], function () {
   return gulp.src(['Dockerfile', 'package.json', 'app.js'])
     .pipe(gulp.dest('release'));
 });
