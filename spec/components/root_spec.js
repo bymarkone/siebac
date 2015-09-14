@@ -5,7 +5,7 @@ import BuyPrice from 'components/car/buy_price';
 
 const TestUtils = React.addons.TestUtils;
 
-describe('Foo', () => {
+describe('Root component', () => {
   it('renders buy price', () => {
     let rendered = TestUtils.renderIntoDocument(<Root />)
 

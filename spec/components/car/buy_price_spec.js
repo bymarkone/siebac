@@ -6,7 +6,7 @@ import {Cursor} from 'react-cursor';
 
 const TestUtils = React.addons.TestUtils;
 
-describe('Foo', () => {
+describe('Buy Price component', () => {
   let rendered, cursor;
 
   beforeEach(() => {
