@@ -10,7 +10,7 @@ export default class BuyPrice extends React.Component {
     return (
       <div className="form-group">
         <label htmlFor="buy-price-range">
-          Qual o valor de mercado atual do seu carro?
+          Qual o valor de market atual do seu carro?
           <small>
             <a href="http://www.fipe.org.br/pt-br/indices/veiculos/" target="_blank">(Consulte a tabela Fipe)</a>
           </small>
